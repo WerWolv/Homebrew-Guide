@@ -6,95 +6,111 @@
 Create an emuMMC on Windows
 ===========================
 
-Requirements
-^^^^^^^^^^^^
+.. danger::
+	We are not responsible for what happens to your data, your computer, or your Nintendo Switch. We have written this guide to be as easy to follow as possible, and have walked through the steps ourselves to make sure everything works to the best of our ability. If something happens because you fail to follow the guide then you have no one to blame, but yourself.
 
-- Windows 10
-- `DiskGenius <https://www.diskgenius.com/>`_
-- Administrator access
+Before getting started you will need the following:
 
-Guide
-^^^^^
+* A hackable Nintendo Switch.
 
-1. Make sure everything on your SD Card is backed up on to your computer.
-2. Open DiskGenius.
-3. Click on your SD Card in the left menu. **It is very important to select the correct device from this menu as this will be destructive.**
+* An SD Card that is 32GB or larger.
 
-.. image:: ../images/windows/Step3.png
+* Latest version of `Atmosphere <https://github.com/Atmosphere-NX/Atmosphere/releases/latest>`_ and `Hekate <https://github.com/CTCaer/hekate/releases/latest>`_ -or- the latest version of `Kosmos <https://github.com/AtlasNX/Kosmos/releases/latest>`_.
 
-4. In the center right click on your partition and click on "Delete Current Partition(Del)".
+* Windows 10
 
-.. image:: ../images/windows/Step4.png
+* `DiskGenius <https://www.diskgenius.com/>`_
 
-5. A dialog box should show up, click "Yes" to confirm.
+* Administrator access
 
-.. image:: ../images/windows/Step5.png
+Once you are ready, follow the guide below:
 
-6. In the center right click in the empty space and click on "Create New Parition(N)".
+#. Make sure everything on your SD Card is backed up on to your computer.
 
-.. image:: ../images/windows/Step6.png
+#. Open DiskGenius.
 
-7. Make sure the partition type is set to "Primary Partition", and the file system type is "FAT32". To get the size of the partition you will want to take the total size available in MB and subtract it by 29856 MB to get the size of your first partition. (Ex 30436 - 29856 = 579) Give your partition a label, and then click "Ok". This will be your SD Card partition that holds your atmosphere, bootloader, Nintendo, etc... folders.
+#. Click on your SD Card in the left menu.
 
-.. image:: ../images/windows/Step7.png
+    .. danger::
+        It is very important to select the correct device from this menu as this will be destructive.
 
-8. In the center right click in the empty space and click on "Create New Parition(N)" again.
+    .. image:: ../images/windows/Step3.png
 
-.. image:: ../images/windows/Step8.png
+#. In the center right click on your partition and click on "Delete Current Partition(Del)".
 
-9. Make sure the partition type is set to "Primary Partition", and the file system type is "Linux swap". The default size should be 29856 MB, and you should not be able to give this parition a label, simply click "Ok" when everything looks good. This will be the partition for your emuMMC.
+    .. image:: ../images/windows/Step4.png
 
-.. image:: ../images/windows/Step9.png
+#. A dialog box should show up, click "Yes" to confirm.
 
-10. Click "Save All" up in the top left, confirm you want to write all changes and wait for it to finish.
+    .. image:: ../images/windows/Step5.png
 
-.. image:: ../images/windows/Step10.png
+#. In the center right click in the empty space and click on "Create New Parition(N)".
 
-11. Once it finishes Windows will mount your SD Card, you may get a dialog prompt to format a drive. You will always want to hit "Cancel" on this. This is because Windows can not read your emuMMC partition.
+    .. image:: ../images/windows/Step6.png
 
-.. image:: ../images/windows/Step11.png
+#. Make sure the partition type is set to "Primary Partition", and the file system type is "FAT32". To get the size of the partition you will want to take the total size available in MB and subtract it by 29856 MB to get the size of your first partition. (Ex 30436 - 29856 = 579) Give your partition a label, and then click "Ok". This will be your SD Card partition that holds your atmosphere, bootloader, Nintendo, etc... folders.
 
-12. You can now close DiskGenius and restore your files back to your SD Card. (Your SD Card will look different from mine.)
+    .. image:: ../images/windows/Step7.png
 
-.. image:: ../images/windows/Step12.png
+#. In the center right click in the empty space and click on "Create New Parition(N)" again.
 
-13. Eject your SD Card and insert it into your Switch. Turn your Switch on in RCM and inject the Hekate payload.
-14. Tap on "emuMMC".
+    .. image:: ../images/windows/Step8.png
 
-.. image:: ../images/HekateStep1.png
+#. Make sure the partition type is set to "Primary Partition", and the file system type is "Linux swap". The default size should be 29856 MB, and you should not be able to give this parition a label, simply click "Ok" when everything looks good. This will be the partition for your emuMMC.
 
-15. Tap on "Create emuMMC".
+    .. image:: ../images/windows/Step9.png
 
-.. image:: ../images/HekateStep2and5.png
+#. Click "Save All" up in the top left, confirm you want to write all changes and wait for it to finish.
 
-16. Tap on "SD Partition".
+    .. image:: ../images/windows/Step10.png
 
-.. image:: ../images/HekateStep3.png
+#. Once it finishes Windows will mount your SD Card, you may get a dialog prompt to format a drive. You will always want to hit "Cancel" on this. This is because Windows can not read your emuMMC partition.
 
-17. Tap on "Continue", and wait.
+    .. image:: ../images/windows/Step11.png
 
-.. image:: ../images/HekateStep4.png
+#. You can now close DiskGenius and restore your files back to your SD Card.
 
-18. Tap on "Close" on the top right, and then tap on "Change emuMMC".
+    .. note::
+        The content of your SD card may look different.
 
-.. image:: ../images/HekateStep2and5.png
+    .. image:: ../images/windows/Step12.png
 
-19. Tap on "SD RAW 1", and tap "OK".
+#. Eject your SD Card and insert it into your Switch. Turn your Switch on in RCM and inject the Hekate payload.
 
-.. image:: ../images/HekateStep6.png
+#. Tap on "emuMMC".
 
-20. Tap on "Close" on the top right, tap on "Launch", and boot into your emuMMC. (If you downloaded Hekate by itself then you needed to create a hekate_ipl.ini file in your bootloader folder. That is outside the scope of this guide. If you don't know how to do that then use Kosmos.)
+    .. image:: ../images/HekateStep1.png
 
-.. image:: ../images/HekateStep7.png
+#. Tap on "Create emuMMC".
 
-21. Congratulations you are done. You can go into "System Settings", scroll down to "System", and you should see an "E" at the end of your "Current version:" indicating you are in your emuMMC.
+    .. image:: ../images/HekateStep2and5.png
 
-.. image:: ../images/SystemSettings.jpg
+#. Tap on "SD Partition".
 
+    .. image:: ../images/HekateStep3.png
 
-Disclaimer
-^^^^^^^^^^
-I am not responsible for what happens to your data, your computer, or your Nintendo Switch. I have written this guide to be as easy to follow as possible, and have walked through the steps myself to make sure everything works to the best of my ability. If something happens because you fail to follow the guide then you have no one to blame, but yourself. If you find an issue with the guide feel free to leave an Issue or Pull Request, however I will not be troubleshooting, or supporting users in the use of this guide.
+#. Tap on "Continue", and wait.
+
+    .. image:: ../images/HekateStep4.png
+
+#. Tap on "Close" on the top right, and then tap on "Change emuMMC".
+
+    .. image:: ../images/HekateStep2and5.png
+
+#. Tap on "SD RAW 1", and tap "OK".
+
+    .. image:: ../images/HekateStep6.png
+
+#. Tap on "Close" on the top right, tap on "Launch", and boot into your emuMMC.
+
+    .. note::
+        If you downloaded Hekate by itself then you needed to create a hekate_ipl.ini file in your bootloader folder. That is outside the scope of this guide. If you don't know how to do that then use Kosmos.
+
+    .. image:: ../images/HekateStep7.png
+
+#. Congratulations you are done. You can go into "System Settings", scroll down to "System", and you should see an "E" at the end of your "Current version:" indicating you are in your emuMMC.
+
+    .. image:: ../images/SystemSettings.jpg
 
 .. toctree::
    :maxdepth: 2
