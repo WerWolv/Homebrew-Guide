@@ -128,11 +128,6 @@ Once you are ready, follow the guide below:
 
     .. image:: ../images/SystemSettings.jpg
 
-
-Disclaimer
-^^^^^^^^^^
-We are not responsible for what happens to your data, your computer, or your Nintendo Switch. We have written this guide to be as easy to follow as possible, and have walked through the steps ourselves to make sure everything works to the best of our ability. If something happens because you fail to follow the guide then you have no one to blame, but yourself.
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
