@@ -1,8 +1,3 @@
-pre
-{
-background-color: #b9b9b9 !important;
-}
-
 .wy-nav-content
 {
 background: #3c3c3c;
@@ -95,4 +90,16 @@ ul .simple {
 
 th {
     text-align: center;
+}
+
+.rst-content div.highlight-default {
+    border: 0 none;
+}
+
+.rst-content div.highlight-default div.highlight {
+    background-color: transparent;
+}
+
+.rst-content div.highlight pre {
+    background-color: #2d2d2d;
 }
