@@ -83,3 +83,5 @@ This guide will walk you through all of the steps required to getting homebrew a
    :maxdepth: 2
    :caption: Options
    :hidden:
+   
+   /switch-theme

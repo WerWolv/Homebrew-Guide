@@ -104,15 +104,17 @@ html_context = {
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+html_css_files = [
+    'theme.css'
+]
+
+html_js_files = [
+    ('theme.js', {'async': 'async'})
+]
+
 html_logo = "_static/logo.png"
 
 html_show_sourcelink = False
-
-def setup(app):
-   app.add_stylesheet("theme.css")
-  
-
-
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
