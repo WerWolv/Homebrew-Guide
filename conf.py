@@ -20,7 +20,7 @@ sys.path.insert(0, os.path.abspath('_extensions'))
 # -- Project information -----------------------------------------------------
 
 project = 'Homebrew Guide'
-copyright = '2019, noahc3, Team AtlasNX'
+copyright = '2020, noahc3, Team AtlasNX'
 author = 'noahc3, Team AtlasNX'
 
 # The short X.Y version
