@@ -40,7 +40,6 @@ release = ''
 # ones.
 extensions = [
     'button',
-    'sphinxcontrib.googleanalytics',
     'cloud_sptheme.ext.table_styling'
 ]
 
@@ -87,6 +86,7 @@ html_favicon = '_static/favicon.ico'
 # documentation.
 
 html_theme_options = {
+    'analytics_id': 'UA-124060019-2',
     'logo_only': True,
 	'prev_next_buttons_location': None
 }
@@ -198,8 +198,3 @@ epub_title = project
 
 # A list of files that should not be packed into the epub file.
 epub_exclude_files = ['search.html']
-
-
-#google analytics
-
-googleanalytics_id = 'UA-124060019-2'
